@@ -47,7 +47,7 @@ class PCG32
         $s18 = ($state >> 18) & (0x7fffffffffffffff >> 17);
         $s59 = ($state >> 59) & (0x7fffffffffffffff >> 58);
 
-        // $s18 already has any sign extension masked away, so no need to mask this shift.
+        // ror32 will discard the upper bits so no need to mask here.
         return $this->ror32((($s18 ^ $state) >> 27), $s59);
     }
 }
