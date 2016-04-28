@@ -2,7 +2,7 @@
 
 namespace PCG;
 
-class PCGTest extends \PHPUnit_Framework_TestCase
+class PCG32Test extends \PHPUnit_Framework_TestCase
 {
     function testOutput()
     {
